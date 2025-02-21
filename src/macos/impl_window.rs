@@ -192,7 +192,7 @@ impl ImplWindow {
             // CGWindowListCopyWindowInfo 返回窗口顺序为从顶层到最底层
             // 即在前面的窗口在数组前面
             let cf_array = match CGWindowListCopyWindowInfo(
-                CGWindowListOption::OptionOnScreenOnly | CGWindowListOption::ExcludeDesktopElements,
+                CGWindowListOption::OptionAll | CGWindowListOption::ExcludeDesktopElements,
                 0,
             ) {
                 Some(cf_array) => cf_array,
